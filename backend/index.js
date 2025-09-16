@@ -1,38 +1,37 @@
-const express = require ('express')
-const connectDB = require ('./db.js')
-const userModel = require ('./models/userModel.js')
-const cors = require ('cors')
-const bodyParser = require ('body-parser');
-const userRoute = require('./routes/userRoute')
-const errorHandler = require("./middleWare/errorMiddleware")
+// server.js or index.js
+const express = require("express");
+const connectDB = require("./db.js");
+const cors = require("cors");
+require("dotenv").config();
 
-const app = express ()
+// Import Routes and Middleware
+const userRoute = require("./routes/userRoute");
+const itemRoute = require("./routes/itemRoutes");
+const orderRoute = require("./routes/orderRoutes");
+const dashboardRoute = require("./routes/dashboard");
+const errorHandler = require("./middleWare/errorMiddleware");
 
+const app = express();
+const PORT = process.env.PORT || 6087;
 
-// Middlewares
-app.use(express.json())
-app.use(express.urlencoded({extended: false}))
-app.use(bodyParser.json())
+// Connect to MongoDB
+connectDB();
 
-// Routes Middlewares
+// Global Middlewares
+app.use(express.json()); // Parses JSON bodies
+app.use(express.urlencoded({ extended: false })); // Parses URL-encoded bodies
+app.use(cors()); // Enable CORS
+
+// API Routes
 app.use("/api/users", userRoute);
+app.use("/api/items", itemRoute);
+app.use("/api/orders", orderRoute);
+app.use("/api/dashboard", dashboardRoute); 
 
-// Routes
-app.get("/", (req,res) => {
-   res.send("Home Page");
+// Global Error Handler
+app.use(errorHandler);
+
+// Start Server
+app.listen(PORT, () => {
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });
-
-// Error Middleware
-  app.use(errorHandler);
-
-connectDB()
-app.get ('/',async(req , res) => { 
-    const responce = await itemModel.find()
-    return res.json({items : responce}) 
-})
-
-app.listen(5173, () =>{
-
-    console.log("app is running");
-  
-})

@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F8C471, #5DADE2);
+}
+
+#root {
+  width: 100%;
+  padding: 0.6rem;
+}
+
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register-box {
+  width: 400px;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 0.7rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title and Subtitle */
+.register-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #FF5733;
+  margin-bottom: 0.5rem;
+}
+
+.register-subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Fields */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid #FF5733;
+  transition: 0.3s ease-in-out;
+  position: relative; /* Ensure eye icon stays within input field */
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  padding-left: 0.5rem;
+}
+
+.input-group:focus-within {
+  border-color: #2E86C1;
+  box-shadow: 0 0 6px rgba(46, 134, 193, 0.6);
+}
+
+/* Icons */
+.input-icon {
+  color: #FF5733;
+  font-size: 1.2rem;
+}
+
+/* 👀 Password Eye Icon */
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #3E517A;
+}
+
+.eye-icon:hover {
+  color: #2C3E50;
+}
+
+/* Error Message */
+.register-error {
+  color: #C70039;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+/* ✅ Toast Container */
+.Toastify__toast-container {
+  font-family: "Poppins", sans-serif;
+  width: 350px !important; /* Adjust width for better readability */
+}
+
+/* ✅ General Toast Styles */
+.Toastify__toast {
+  border-radius: 12px !important; /* More rounded for a sleek look */
+  font-size: 1rem !important;
+  font-weight: 500;
+  padding: 16px !important;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ✅ Success Toast */
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #28a745, #218838) !important;
+  color: white !important;
+  border-left: 6px solid #1e7e34 !important; /* Green left border */
+}
+
+/* ✅ Error Toast */
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #dc3545, #c82333) !important;
+  color: white !important;
+  border-left: 6px solid #a71d2a !important; /* Red left border */
+}
+
+/* ✅ Warning Toast */
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+  color: white !important;
+  border-left: 6px solid #c69500 !important; /* Yellow left border */
+}
+
+/* ✅ Info Toast */
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #17a2b8, #138496) !important;
+  color: white !important;
+  border-left: 6px solid #0f6674 !important; /* Blue left border */
+}
+
+/* ✅ Toast Message */
+.Toastify__toast-body {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ Toast Icons */
+.Toastify__toast-icon {
+  font-size: 1.4rem !important;
+}
+
+/* ✅ Toast Progress Bar */
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.7) !important; /* Subtle white progress bar */
+}
+
+/* ✅ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Buttons */
+.register-button {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #FF5733, #C70039);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-button:hover {
+  background: linear-gradient(90deg, #C70039, #FF5733);
+  transform: scale(1.03);
+}
+
+/* ✅ Checkbox Container */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.checkbox-container input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #FF5733;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.checkbox-container input:checked {
+  background: #FF5733;
+  border-color: #FF5733;
+}
+
+.checkbox-container input:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Footer */
+.register-footer {
+  font-size: 1rem;
+  margin-top: 1.2rem;
+}
+
+.register-footer a {
+  color: #C70039;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}

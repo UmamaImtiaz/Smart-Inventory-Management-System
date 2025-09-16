@@ -1,0 +1,225 @@
+/* General layout */
+.stock-container {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 24px;
+  background-color: #ffffff; /* Pure white for clarity */
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #111827; /* Dark text for contrast */
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.stock-heading {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e3a8a; /* Deep blue */
+  margin-bottom: 24px;
+  gap: 10px;
+}
+
+.stock-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stock-filters input,
+.stock-filters select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  width: 48%;
+  transition: border-color 0.3s ease;
+  color: #111827;
+}
+
+.stock-filters input:focus,
+.stock-filters select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+}
+
+/* Button */
+.add-stock-btn {
+  padding: 10px 20px;
+  background-color: #10b981; /* Emerald green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.add-stock-btn:hover {
+  background-color: #059669;
+}
+
+.add-stock-btn svg {
+  margin-right: 8px;
+}
+
+/* Modal */
+.stock-form-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Table Styles */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stock-table th,
+.stock-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.stock-table th {
+  background-color: #f9fafb;
+  color: #374151;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.stock-table td {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.actions-cell {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.3s;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+.edit-btn {
+  color: #3b82f6;
+}
+
+.delete-btn {
+  color: #ef4444;
+}
+
+.no-items {
+  text-align: center;
+  font-size: 1rem;
+  color: #9ca3af;
+  padding: 20px 0;
+  font-style: italic;
+}
+/* Hover effect on table row */
+.stock-table tbody tr:hover {
+  background-color: #f3f4f6; /* Light gray background */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional: hover effect on cells */
+.stock-table td:hover {
+  background-color: #e0f2fe; /* Light blue */
+  transition: background-color 0.3s ease;
+}
+
+/* Optional: highlight delete/edit icons on hover */
+.action-btn:hover {
+  background-color: #f1f5f9;
+  border-radius: 6px;
+}
+
+
+/* Status Styling */
+td[style] {
+  font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .stock-container {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .stock-filters input,
+  .stock-filters select {
+    width: 100%;
+  }
+
+  .add-stock-btn {
+    width: 100%;
+  }
+
+  .stock-table th,
+  .stock-table td {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .actions-cell {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-btn {
+    margin: 5px 0;
+  }
+
+  .stock-form-modal {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stock-heading {
+    font-size: 1.5rem;
+  }
+
+  .add-stock-btn {
+    font-size: 0.9rem;
+  }
+}

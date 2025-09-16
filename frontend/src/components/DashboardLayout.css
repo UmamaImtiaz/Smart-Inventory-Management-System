@@ -1,0 +1,56 @@
+/* Layout wrapper */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 240px;
+  background-color: #111827;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 2rem 1rem;
+  z-index: 1000;
+}
+
+/* Main section (beside sidebar) */
+.main-section {
+  margin-left: 240px; /* Aligns beside sidebar */
+  width: calc(100% - 240px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  background-color: #ffffff;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Main content area */
+.content-section {
+  padding: 1.5rem;
+  padding-top: 1.5rem;
+  background-color: #f9fafb;
+  flex-grow: 1;
+  min-height: calc(100vh - 60px); /* Leaves room for navbar */
+  overflow-y: auto;
+}
+
+/* Typography and utils */
+* {
+  box-sizing: border-box;
+}
