@@ -2,39 +2,38 @@
 
 A full-stack inventory management application built with **React.js, Node.js, Express.js, and MongoDB**.
 
-The system provides a structured way to manage products, inventory records, stock levels, and day-to-day inventory operations through a web-based interface.
+The application provides a web-based interface for managing products, inventory records, and stock operations, with a React frontend and Node.js/Express backend.
 
 ## Features
 
-* Product and inventory management
-* Stock tracking and inventory records
-* Add, update, and manage products
-* Organized inventory data
+* Product management
+* Inventory and stock management
+* Add and update product records
+* Inventory record management
 * Responsive web interface
 * RESTful API integration
 * MongoDB database integration
-* Full-stack React and Node.js architecture
+* Separate frontend and backend architecture
 
 ## Tech Stack
 
-### Frontend
+**Frontend**
 
 * React.js
 * JavaScript
-* HTML5
-* CSS3
+* CSS
 
-### Backend
+**Backend**
 
 * Node.js
 * Express.js
 * REST APIs
 
-### Database
+**Database**
 
 * MongoDB
 
-### Tools
+**Development Tools**
 
 * Git
 * GitHub
@@ -43,14 +42,15 @@ The system provides a structured way to manage products, inventory records, stoc
 ## Project Structure
 
 ```text
-smart-inventory-management-system/
-├── frontend/
+Smart-Inventory-Management-System/
 ├── backend/
-├── README.md
-└── ...
+├── frontend/
+├── .gitignore
+├── LICENSE
+├── package.json
+├── package-lock.json
+└── README.md
 ```
-
-> Project structure may vary depending on the current implementation.
 
 ## Getting Started
 
@@ -69,31 +69,63 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/UmamaImtiaz/Smart-Inventory-Management-System.git
-```
-
-Navigate to the project directory:
-
-```bash
 cd Smart-Inventory-Management-System
 ```
 
-Install the required dependencies for the frontend and backend according to the project structure.
+### Backend Setup
 
-### Environment Variables
+Navigate to the backend directory:
 
-Create a `.env` file for the backend configuration and add the required environment variables, such as the MongoDB connection string and application configuration.
+```bash
+cd backend
+```
 
-**Do not commit your `.env` file or any private credentials to the repository.**
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file and configure the required environment variables, including your MongoDB connection string.
+
+Start the backend server using the project's configured start command.
+
+### Frontend Setup
+
+Open a new terminal and navigate to the frontend directory:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the React development server using the project's configured start command.
+
+## Environment Variables
+
+The backend requires environment variables for application configuration and database connectivity.
+
+Keep sensitive values such as database credentials, API keys, and secrets in `.env` files.
+
+**Never commit `.env` files or private credentials to the repository.**
 
 ## Project Status
 
-The project is maintained as a full-stack inventory management application and can be extended with additional inventory, reporting, authentication, and administrative features.
+This project is a full-stack inventory management application developed using React.js, Node.js, Express.js, and MongoDB.
+
+## License
+
+This project is licensed under the **MIT License**.
 
 ## Author
 
 **Umama Imtiaz**
 
-Full-Stack Web Developer
-React.js · Node.js · PHP
+Full-Stack Web Developer | React.js · Node.js · PHP
 
 [GitHub](https://github.com/UmamaImtiaz) · [LinkedIn](https://www.linkedin.com/in/umama-imtiaz)
